@@ -54,8 +54,8 @@ function adcTarefa() {
         li.appendChild(div2)
     
         var ul = document.getElementsByClassName("lista")
-    
-        ul.appendChild(li)   
+        console.log(ul);
+        ul[0].appendChild(li)   
     }
 }
 
