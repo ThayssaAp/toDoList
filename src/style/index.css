@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background-color: #B8E2F9;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1%;
+}
+
+header h1 {
+    color: #fff;
+    margin: 1%;
+    font-weight: bold;
+}
+
+.titulo {
+    color: #5093D0;
+    margin: 1%;
+    font-weight: 700;
+}
+
+.titulo-form {
+    margin: 2%;
+    margin-bottom: 5%;
+    font-weight: 400;
+}
+
+.item {
+    margin: 1%;
+    padding: 1%;
+    margin-top: 8%;
+}
+
+.item label {
+    font-weight: 300;
+}
+
+.item input {
+    background-color: #F5F5F5;
+    border: none;
+    margin-top: 1%;
+    width: 40vh;
+    height: 15vh;
+    border-radius: 25px;
+}
+
+.item input::placeholder {
+    font-weight: 300;
+    padding-left: 3%;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "adc-tarefa tarefa tarefa";
+    gap: 10vh;
+    padding: 3vh;
+}
+
+.btn-enviar {
+    background-color: #62B4FF;
+    color: #fff;
+    border-radius: 20px;
+    padding: 2%;
+    margin-left: 2%;
+}
+
+.adc-tarefa {
+    padding: 2%;
+    grid-area: adc-tarefa;
+}
+
+.tarefa {
+    grid-area: tarefa;
+}
+
+.tarefa h2 {
+    font-weight: 400;
+}
+
+.tarefa p {
+    padding: 3% 1%;
+    font-size: small;
+}
+
+.cx-tarefa {
+    width: 110vh;
+    height: 13vh;
+    background-color: #F5F5F5;
+    border-radius: 30px;
+    font-weight: 300;
+    padding: 2%;
+    margin: 2vh 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
+
+.cx-tarefa:hover {
+    background-color: rgb(232, 232, 232);
+    cursor: pointer;
+}
+
+.btn-editar {
+    width: 5vh;
+    height: 5vh;
+    background-color: #fff;
+    border-radius: 5px;
+    border: none;
+}
+
+.btn-apagar {
+    width: 5vh;
+    height: 5vh;
+    background-color: #fff;
+    border-radius: 5px;
+    border: none;
+}
+
+.btn-apagar img {
+    height: 3vh;
+}
+
+.btn-editar img {
+    height: 3vh;
+}
+
+.modal {
+    background-color: #5093D0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 550px;
+    height: 400px;
+    animation: animate;
+    animation-duration: 1000ms;
+    box-shadow: 6px 5px 5px 0px rgb(0 0 0 / 40%);
+    display: none;
+}
+
+@keyframes animate {
+    from {
+        opacity: 1;
+    }
+
+    from {
+        opacity: 0;
+    }
+}
+
+.modal h1 {
+    color: #fff;
+    padding: 5%;
+}
+
+.modal p {
+    color: #F5F5F5;
+    padding-left: 5%;
+}
+
+.btn-feito {
+    padding: 1% 2%;
+    border-radius: 20px;
+    background-color: #fff;
+    color: #5093D0;
+    margin-left: 5%;
+    margin-top: 37%;
+    border: none;
+}
+
+.fechar-modal {
+    background-color: #ffffff;
+    color: #5093D0;
+    padding: 1%;
+    border-radius: 50%;
+    border: none;
+    width: 5vh;
+    height: 5vh;
+    margin: 2%;
+    align-items: center;
+    float: right;
+    font-weight: bolder;
+}
+
+.fechar-modal:hover {
+    border: 2px solid #ffffff;
+    color: #fff;
+    background-color: #5093D0;
+}

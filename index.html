@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./src/img/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="./src/style/index.css">
+</head>
+
+<body>
+    <header>
+        <img src="./src/img/logo.png" width="5%">
+        <h1>To Do List</h1>
+    </header>
+    <div class="container">
+        <div class="adc-tarefa">
+            <form method="post">
+                <h2 class="titulo-form">Adicionar Tarefa</h2>
+                <div class="item">
+                    <label>Título:</label><br>
+                    <input id="titulo-tarefa" name="titulo-tarefa" id="titulo-tarefa" type="text" placeholder="Título">
+                </div>
+
+                <div class="item">
+                    <label>Descrição:</label><br>
+                    <input id="descricao-tarefa" name="descricao-tarefa" id="descricao-tarefa" type="text" placeholder="Descrição">
+                </div>
+                <button class="btn-enviar" type=“submit” title=“enviar”>Enviar</button>
+            </form>
+        </div>
+        <div class="tarefa">
+            <h1 class="titulo">Minhas Tarefas:</h1>
+            <ul class="lista">
+                <!-- <li class="cx-tarefa">
+                    <div onclick="abrirModal()">
+                        <h2 class="titleTarefa">Titulo da tarefa aqui</h2>
+                        <p class="descriptionTarefa">Descrição da tarefa aqui</p>
+                    </div>
+                    <div>
+                        <button class="btn-editar">
+                            <img src="./src/img/lapis.png">
+                        </button>
+                        <button class="btn-apagar">
+                            <img src="./src/img/lixeira.png">
+                        </button>
+                    </div>
+                </li> -->
+            </ul>
+        </div>
+    </div>
+
+    <div class="modal">
+        <button onclick="fecharModal()" class="fechar-modal">X</button>
+        <div>
+            <h1>Titulo da Tarefa aqui</h1>
+            <p>Descrição da tarefa aqui</p>
+        </div>
+        <button class="btn-feito">
+            Feito
+            <img src="./src/img/check.png" width="15vh">
+        </button>
+    </div>
+
+    <script src="./src/js/index.js"></script>
+</body>
+
+</html>
