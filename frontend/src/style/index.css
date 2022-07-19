@@ -47,11 +47,16 @@ header h1 {
     width: 40vh;
     height: 15vh;
     border-radius: 25px;
+    padding: 5%;
 }
 
 .item input::placeholder {
     font-weight: 300;
-    padding-left: 3%;
+}
+
+.item input:focus {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    border: none;
 }
 
 .container {
@@ -66,8 +71,18 @@ header h1 {
     background-color: #62B4FF;
     color: #fff;
     border-radius: 20px;
-    padding: 2%;
-    margin-left: 2%;
+    padding: 3%;
+    margin: 2%;
+    border: none;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.btn-enviar:hover {
+    background-color: #5093D0;
+    text-shadow: none;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .adc-tarefa {
@@ -103,8 +118,15 @@ header h1 {
 }
 
 .cx-tarefa:hover {
-    background-color: rgb(232, 232, 232);
+    background-color: rgb(235, 235, 235);
     cursor: pointer;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.botoes-tarefa {
+    display: flex;
+    flex-direction: row;
+    gap: 2vh;
 }
 
 .btn-editar {
@@ -133,7 +155,7 @@ header h1 {
 
 .modal {
     background-color: #5093D0;
-    position: absolute;
+    position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
