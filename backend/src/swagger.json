@@ -132,11 +132,20 @@
             }
             
     },
-    "/tarefas/:id":{
+    "/tarefas/{id}":{
         "put": {
             "tags": ["Tarefa"],
             "summary": "Update a task",
             "description": "Updating a application task",
+            "parameters":[  
+               {  
+                  "name":"id",
+                  "in":"path",
+                  "description":"Task identification number",
+                  "required":true,
+                  "type":"string"
+               }
+            ],
             "requestBody": {
                 "content": {
                     "application/json": {
@@ -207,6 +216,15 @@
         "tags": ["Tarefa"],
         "summary": "Delete a task",
         "description": "Delete a application task",
+        "parameters":[  
+               {  
+                  "name":"id",
+                  "in":"path",
+                  "description":"Task identification number",
+                  "required":true,
+                  "type":"string"
+               }
+        ],
         "responses": {
             "200": {
                 "description": "Delete success",
