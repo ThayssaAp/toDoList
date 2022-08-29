@@ -129,77 +129,130 @@
                         }    
                     }
                 }
+            }
+            
+    },
+    "/tarefas/:id":{
+        "put": {
+            "tags": ["Tarefa"],
+            "summary": "Update a task",
+            "description": "Updating a application task",
+            "requestBody": {
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "titulo": {
+                                    "type": "string"
+                                },
+                                "descricao": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "examples": {
+                            "tarefa": {
+                                "value": {
+                                    "titulo": "Lavar a louça",
+                                    "descricao": "lavar a louca de casa"
+                                }
+                            }
+                        }
+                    }
+                }
             },
-            "put": {
-                "tags": ["Tarefa"],
-                "summary": "Update a task",
-                "description": "Updating a application task",
-                "requestBody": {
+            "responses":{
+                "200": {
+                    "description": "Success",
                     "content": {
                         "application/json": {
                             "schema": {
                                 "type": "object",
                                 "properties": {
-                                    "titulo": {
-                                        "type": "string"
-                                    },
-                                    "descricao": {
-                                        "type": "string"
-                                    }
-                                }
-                            },
-                            "examples": {
-                                "tarefa": {
-                                    "value": {
-                                        "titulo": "Lavar a louça",
-                                        "descricao": "lavar a louca de casa"
-                                    }
-                                }
-                            }
-                        }
-                    }
-                },
-                "responses":{
-                    "200": {
-                        "description": "Success",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "type": "object",
-                                    "properties": {
-                                                   "tarefa": {
-                                                       "type": "object",
-                                                       "properties": {
-                                                           "id": {
-                                                               "type": "string",
-                                                               "example": "721e6fa8-1800-4d12-a089-c80e00909d94"
-                                                           },
-                                                           "titulo": {
-                                                               "type": "string",
-                                                               "example": "Fazer lição de casa"
-                                                           },
-                                                           "descricao": {
-                                                               "type": "string",
-                                                               "example": "Finalizar liçao de casa de matematica"
-                                                           },
-                                                           "updatedAt": {
-                                                               "type": "string",
-                                                               "example": "2022-08-29T19:30:26.645Z"
-                                                           },
-                                                           "createdAt": {
-                                                               "type": "string",
-                                                               "example": "2022-08-27T17:27:54.312Z"
-                                                           }
+                                               "tarefa": {
+                                                   "type": "object",
+                                                   "properties": {
+                                                       "id": {
+                                                           "type": "string",
+                                                           "example": "721e6fa8-1800-4d12-a089-c80e00909d94"
+                                                       },
+                                                       "titulo": {
+                                                           "type": "string",
+                                                           "example": "Lavar a louça"
+                                                       },
+                                                       "descricao": {
+                                                           "type": "string",
+                                                           "example": "lavar a louca de casa"
+                                                       },
+                                                       "updatedAt": {
+                                                           "type": "string",
+                                                           "example": "2022-08-29T19:30:26.645Z"
+                                                       },
+                                                       "createdAt": {
+                                                           "type": "string",
+                                                           "example": "2022-08-27T17:27:54.312Z"
                                                        }
-                                                   }          
-                                               }
-                                           }  
-                            }
-                            
-                        }    
+                                                   }
+                                               }          
+                                           }
+                                       }  
+                        }
+                        
+                    }    
+                }
+        }
+    },
+    "delete": {
+        "tags": ["Tarefa"],
+        "summary": "Delete a task",
+        "description": "Delete a application task",
+        "responses": {
+            "200": {
+                "description": "Delete success",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                           "message": {
+                                               "type": "string",
+                                               "example": "Tarefa deleta com sucesso"
+                                           },
+                                           "tarefaDeletada": {
+                                            "type": "object",
+                                            "properties": {
+                                                "id": {
+                                                    "type": "string",
+                                                    "example": "721e6fa8-1800-4d12-a089-c80e00909d94"
+                                                },
+                                                "titulo": {
+                                                    "type": "string",
+                                                    "example": "Lavar a louça"
+                                                },
+                                                "descricao": {
+                                                    "type": "string",
+                                                    "example": "lavar a louca de casa"
+                                                },
+                                                "updatedAt": {
+                                                    "type": "string",
+                                                    "example": "2022-08-29T19:30:26.645Z"
+                                                },
+                                                "createdAt": {
+                                                    "type": "string",
+                                                    "example": "2022-08-27T17:27:54.312Z"
+                                                }
+                                            }
+                                           }
+                                               
+                                           }          
+                                       }
+                                   }  
                     }
+                    
+                }    
             }
         }
     }
+    }
  }
-}
