@@ -2,7 +2,7 @@
 Aplicação TODO.
 
 ## Sobre o projeto
-Aplicação feita para listagem de tarefas.
+Aplicação feita com objetivo de fazer uma listagem de tarefas.
 
 <img width="1129" alt="imgtodo" src="https://user-images.githubusercontent.com/60610706/178370222-ffffc580-0cda-45f0-a215-ffec62d036f5.png">
 
