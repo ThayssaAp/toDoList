@@ -39,7 +39,7 @@ Mysql <img height="14em" src="https://img.shields.io/badge/mysql-%2300f.svg?styl
 
 # Documentação
 
-<img width="842" alt="Captura de Tela 2022-08-29 às 16 31 22" src="https://user-images.githubusercontent.com/60610706/187283518-7ef058d9-07d0-4b0b-a410-bce1681264c7.png">
+<img width="841" alt="Captura de Tela 2022-08-29 às 18 32 24" src="https://user-images.githubusercontent.com/60610706/187303023-c73bfb27-827b-4233-8730-f7b4ee3c4869.png">
 
 ### URL ACCESS
 - http://localhost:3001/todo-docs/
