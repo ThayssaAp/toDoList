@@ -8,6 +8,7 @@
             "email": "fernandesferreirinha9@gmail.com"
         }
     },
+    
     "paths": {
         "/tarefas": {
             "post": {
@@ -76,6 +77,55 @@
                                            }  
                             }
                             
+                        }    
+                    },
+                    "400": {
+                        "description": "Error Request",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                                   "message": {
+                                                       "type": "string",
+                                                       "example": "notNull Violation: tarefas.descricao cannot be null"
+                                                   }          
+                                               }
+                                           }  
+                            }
+                        }
+                        
+                    }
+                }
+            },
+            "get": {
+                "tags": ["Tarefa"],
+                "summary": "Get All task",
+                "description": "Getting all application task",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                        "properties": {
+                                            "tarefas": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "object",
+                                                    "example": {
+                                                        "id":  "721e6fa8-1800-4d12-a089-c80e00909d94",
+                                                        "titulo": "Fazer lição de casa",
+                                                        "descricao": "Finalizar liçao de casa de matematica",
+                                                        "updatedAt": "2022-08-27T17:27:54.312Z",
+                                                        "createdAt": "2022-08-27T17:27:54.312Z" 
+                                                    }                                                   
+                                                }                                                                                                        
+                                            }                                       
+                                    }                                   
+                                }  
+                            }                           
                         }    
                     }
                 }
