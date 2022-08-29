@@ -2,7 +2,7 @@
 Aplicação TODO.
 
 ## Sobre o projeto
-Aplicação feita para listagem de tarefas.
+Aplicação feita com objetivo de fazer uma listagem de tarefas.
 
 <img width="1129" alt="imgtodo" src="https://user-images.githubusercontent.com/60610706/178370222-ffffc580-0cda-45f0-a215-ffec62d036f5.png">
 
@@ -13,8 +13,20 @@ Aplicação feita para listagem de tarefas.
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)  16.14.0
 
 ## Tecnologias utilizadas
+
+### Linguagens
 - JavaScript <img height="14em" src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" />
-- Typescript ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+- Typescript <img height="14em" src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" />
+
+### Framework
+Express <img height="14em" src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB" />
+
+### ORM 
+Sequelize <img height="14em" src="https://img.shields.io/badge/Sequelize-52B0E7?style=for-the-badge&logo=Sequelize&logoColor=white" />
+
+### Database
+Mysql <img height="14em" src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white" />
+
 
 ## Como executar
 ### Comandos: 
@@ -27,7 +39,7 @@ Aplicação feita para listagem de tarefas.
 
 # Documentação
 
-<img width="842" alt="Captura de Tela 2022-08-29 às 16 31 22" src="https://user-images.githubusercontent.com/60610706/187283518-7ef058d9-07d0-4b0b-a410-bce1681264c7.png">
+<img width="841" alt="Captura de Tela 2022-08-29 às 18 32 24" src="https://user-images.githubusercontent.com/60610706/187303023-c73bfb27-827b-4233-8730-f7b4ee3c4869.png">
 
 ### URL ACCESS
 - http://localhost:3001/todo-docs/
