@@ -2,8 +2,12 @@ import { TarefasModel } from "../models/tarefas.model";
 
 export class PegandoTarefasService {
     async execute(){
-        const tarefas = await TarefasModel.findAll();
-        console.log(tarefas)
-        return tarefas;
+        try {
+            const tarefas = await TarefasModel.findAll();
+            return tarefas;
+        } catch (error) {
+            return error.message;
+        }
+       
     }
 }

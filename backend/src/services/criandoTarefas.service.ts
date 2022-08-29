@@ -15,7 +15,7 @@ export class CriandoTarefasService {
          const tarefa = await TarefasModel.create({id: uuid(),titulo, descricao});
          return tarefa;
        } catch (error) {
-         return error.message
+         return error.message;
        }
     }
 }

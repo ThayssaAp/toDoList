@@ -1,0 +1,85 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Todo Documentation",
+        "description": "This is a simple documentation of the backend list task application. To access the routes, the project must be running on your local machine.",
+        "version": "1.0.0",
+        "contact": {
+            "email": "fernandesferreirinha9@gmail.com"
+        }
+    },
+    "paths": {
+        "/tarefas": {
+            "post": {
+                "tags": ["Tarefa"],
+                "summary": "Create a new task",
+                "description": "Creating a new task in application",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "titulo": {
+                                        "type": "string"
+                                    },
+                                    "descricao": {
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "examples": {
+                                "tarefa": {
+                                    "value": {
+                                        "titulo": "Fazer lição de casa",
+                                        "descricao": "Finalizar liçao de casa de matematica"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses":{
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                                   "tarefa": {
+                                                       "type": "object",
+                                                       "properties": {
+                                                           "id": {
+                                                               "type": "string",
+                                                               "example": "721e6fa8-1800-4d12-a089-c80e00909d94"
+                                                           },
+                                                           "titulo": {
+                                                               "type": "string",
+                                                               "example": "Fazer lição de casa"
+                                                           },
+                                                           "descricao": {
+                                                               "type": "string",
+                                                               "example": "Finalizar liçao de casa de matematica"
+                                                           },
+                                                           "updatedAt": {
+                                                               "type": "string",
+                                                               "example": "2022-08-27T17:27:54.312Z"
+                                                           },
+                                                           "createdAt": {
+                                                               "type": "string",
+                                                               "example": "2022-08-27T17:27:54.312Z"
+                                                           }
+                                                       }
+                                                   }          
+                                               }
+                                           }  
+                            }
+                            
+                        }    
+                    }
+                }
+            }
+        }
+    }
+}
