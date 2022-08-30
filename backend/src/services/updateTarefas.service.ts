@@ -13,16 +13,19 @@ export class UpdateTarefasService {
             if (!tarefa) {
                 return "not found";
             }
-            Object.assign(tarefa, {
-                id: id,
-                titulo: titulo,
-                descricao: descricao
-            });
-            console.log("update: ",tarefa);
-            return tarefa;
+            await TarefasModel.update({
+                titulo: titulo || tarefa.titulo,
+                descricao: descricao || tarefa.descricao
+            }, {
+                where: {
+                    id: id
+                }
+            })
+            const tarefaAtualizada = await TarefasModel.findByPk(id);
+            return tarefaAtualizada;
         } catch (error) {
             return error.message;
         }
 
-    }
+   }
 }
