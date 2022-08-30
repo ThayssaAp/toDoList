@@ -16,7 +16,7 @@ const pegandoTarefaByPk = new PegandoTarefasByPkController();
 routerTarefas.post('/tarefas', criandoTarefa.handle);
 routerTarefas.get('/tarefas', pegandoTarefas.handle);
 routerTarefas.get('/tarefas/:id', pegandoTarefaByPk.handle);
-routerTarefas.put('/tarefas/:id', updateTarefa.handle);
+//routerTarefas.put('/tarefas/:id', updateTarefa.handle);
 routerTarefas.delete('/tarefas/:id', deletandoTarefas.handle);
 
 export { routerTarefas }
