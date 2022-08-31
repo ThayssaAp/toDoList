@@ -27,6 +27,8 @@ Sequelize <img height="14em" src="https://img.shields.io/badge/Sequelize-52B0E7?
 ### Database
 Mysql <img height="14em" src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white" />
 
+### Testes
+Jest <img height="14em" src="https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white" />
 
 ## Como executar
 ### Comandos: 
@@ -39,7 +41,7 @@ Mysql <img height="14em" src="https://img.shields.io/badge/mysql-%2300f.svg?styl
 
 # Documentação
 
-<img width="841" alt="Captura de Tela 2022-08-29 às 18 32 24" src="https://user-images.githubusercontent.com/60610706/187303023-c73bfb27-827b-4233-8730-f7b4ee3c4869.png">
+<img width="936" alt="Captura de Tela 2022-08-31 às 00 25 21" src="https://user-images.githubusercontent.com/60610706/187586065-dbc1342f-d6ae-4c49-9353-49d4c16ec52b.png">
 
 ### URL ACCESS
 - http://localhost:3001/todo-docs/
