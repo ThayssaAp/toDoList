@@ -12,7 +12,7 @@ export class CriandoTarefasService {
        try {
          TarefasModel;
          await db.sync();
-         const tarefa = await TarefasModel.create({id: uuid(),titulo, descricao});
+         const tarefa: any = await TarefasModel.create({id: uuid(),titulo, descricao});
          return tarefa;
        } catch (error) {
          return error.message;

@@ -9,7 +9,7 @@ export class DeletandoTarefasService {
             if(!tarefa){
                 return "not found!";
             }
-            
+
             await TarefasModel.destroy({
                 where: {
                     id: id

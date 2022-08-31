@@ -7,9 +7,12 @@ export class PegandoTarefasByPkController {
             const { id } = req.params;
             const service = new PegandoTarefaByPkService();
             const tarefa = await service.execute(id);
+            if(typeof tarefa === 'string'){
+                return res.json({messageError: tarefa});
+            }
             return res.json({tarefa: tarefa});
         } catch (error) {
-            return res.json({message: error.message})
+            return res.json({messageError: error.message})
         }
     }
 }

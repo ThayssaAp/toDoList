@@ -8,11 +8,11 @@ export class CriandoTarefasController {
             const service = new CriandoTarefasService();
             const newTarefa = await service.execute({titulo, descricao});
             if(typeof newTarefa === 'string'){
-                return res.status(400).json({message: newTarefa});
+                return res.status(400).json({messageError: newTarefa});
             }
             return res.status(201).json({tarefa: newTarefa});
         } catch (error) {
-            return res.status(400).json({message: "erro no controller"});
+            return res.status(400).json({messageError: error.message});
         }
     }
 }

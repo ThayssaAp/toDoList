@@ -2,7 +2,7 @@ import { Sequelize } from 'sequelize';
 //import * as pg from "pg";
 
 export const db = new Sequelize( 
-        'todolist_production',
+        'todolist_staging',
         'root',
         '', {
         dialect: 'mysql',

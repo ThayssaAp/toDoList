@@ -13,6 +13,10 @@ export class UpdateTarefasService {
             if (!tarefa) {
                 return "not found";
             }
+
+            if((titulo && descricao) === undefined ){
+                throw Error("invalid properties")
+            }
             await TarefasModel.update({
                 titulo: titulo || tarefa.titulo,
                 descricao: descricao || tarefa.descricao
