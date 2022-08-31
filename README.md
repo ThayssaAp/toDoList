@@ -36,8 +36,9 @@ Jest <img height="14em" src="https://img.shields.io/badge/-jest-%23C21325?style=
 - yarn install
 - yarn dev
 ### frontend:
-- npm install
-- abrir projeto(index.html) no navegador
+- yarn install
+- yarn dev
+- abrir projeto no navegador: "http://localhost:3500/"
 ### testes:
 - yarn test
 
