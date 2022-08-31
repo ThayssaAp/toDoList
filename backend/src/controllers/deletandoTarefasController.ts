@@ -8,7 +8,7 @@ export class DeletandoTarefasController {
             const service = new DeletandoTarefasService();
             const tarefa = await service.execute(id);
             if(typeof tarefa === 'string'){
-                return res.json({messageError: tarefa});
+                return res.status(400).json({messageError: tarefa});
             }
             return res.json({
                 message: "Tarefa deleta com sucesso",

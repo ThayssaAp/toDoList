@@ -9,7 +9,7 @@ export class UpdateTarefasController {
             const service = new UpdateTarefasService();
             const newTarefa = await service.execute({id, titulo, descricao});
             if(typeof newTarefa === 'string'){
-                return res.json({messageError: newTarefa})
+                return res.status(404).json({messageError: newTarefa})
             }
             return res.json({tarefa_atualizada:newTarefa });
         } catch (error) {
