@@ -86,9 +86,12 @@
                                 "schema": {
                                     "type": "object",
                                     "properties": {
-                                                   "message": {
+                                                   "messageError": {
                                                        "type": "string",
-                                                       "example": "notNull Violation: tarefas.descricao cannot be null"
+                                                       "example": ["notNull Violation: tarefas.descricao cannot be null", 
+                                                                   "notNull Violation: tarefas.titulo cannot be null",
+                                                                   "Invalid title or description!"
+                                                        ]
                                                    }          
                                                }
                                            }  
@@ -129,7 +132,14 @@
                         }    
                     }
                 }
-            }
+            },
+            
+        
+        "options": {
+            "tags": ["Tarefa"],
+            "summary": "Get Options",
+            "description": "Options request in application"
+        }
             
     },
     "/tarefas/{id}":{
@@ -209,8 +219,29 @@
                         }
                         
                     }    
+                },
+                "404":{
+                    "description": "Error Request Params",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                                   "messageError": {
+                                                       "type": "string",
+                                                       "example": "not found!"
+                                                    }          
+                                               }
+                                           }  
+                            }
+                        }
                 }
         }
+    },
+    "patch": {
+        "tags": ["Tarefa"],
+        "summary": "Update description",
+        "description": "Update description task in application"
     },
     "delete": {
         "tags": ["Tarefa"],
@@ -268,9 +299,25 @@
                                    }  
                     }
                     
-                }    
+                },
+                "404":{
+                    "description": "Error Request Params",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                                   "messageError": {
+                                                       "type": "string",
+                                                       "example": "not found!"
+                                                    }          
+                                               }
+                                           }  
+                            }
+                        }
+                }   
             }
         }
-    }
+     }
     }
  }
