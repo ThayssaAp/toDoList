@@ -14,6 +14,7 @@ describe("Criar uma tarefa", () => {
         }
         const result = await serviceCriandoTarefa.execute(tarefaTeste);
         expect(result).toHaveProperty('id');
+        expect(result).not.toHaveProperty('messageError');
     });
 });
 
@@ -41,12 +42,12 @@ describe("Pegar tarefa por id", () => {
         const servicePegandoTarefa = new PegandoTarefaByPkService();
         const result = await servicePegandoTarefa.execute(tarefa.id);
         expect(result).toHaveProperty('id');
+        expect(result).not.toHaveProperty('messageError');
     })
 });
 
 describe("Alterando tarefa", () => {
     test("Espera-se receber a tarefa alterada", async () => {
-        console.log(tarefa.id);
         let updateTarefa = {
             id: tarefa.id,
             titulo: 'novo nome via jest',
@@ -55,6 +56,7 @@ describe("Alterando tarefa", () => {
         const serviceAlterandoTarefa = new UpdateTarefasService();
         const result = await serviceAlterandoTarefa.execute(updateTarefa)
         expect(result).toHaveProperty('titulo', updateTarefa.titulo);
+        expect(result).not.toHaveProperty('messageError');
     })
 });
 
@@ -63,5 +65,6 @@ describe("Deletar uma tarefa", () => {
         const serviceDeletandoTarefa = new DeletandoTarefasService();
         const result = await serviceDeletandoTarefa.execute(tarefa.id);
         expect(result).toHaveProperty('id');
+        expect(result).not.toHaveProperty('messageError');
     })
 });
