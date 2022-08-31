@@ -27,6 +27,8 @@ Sequelize <img height="14em" src="https://img.shields.io/badge/Sequelize-52B0E7?
 ### Database
 Mysql <img height="14em" src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white" />
 
+### Testes
+Jest <img height="14em" src="https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white" />
 
 ## Como executar
 ### Comandos: 
