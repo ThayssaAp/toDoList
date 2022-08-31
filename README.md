@@ -38,6 +38,8 @@ Jest <img height="14em" src="https://img.shields.io/badge/-jest-%23C21325?style=
 ### frontend:
 - npm install
 - abrir projeto(index.html) no navegador
+### testes:
+- yarn test
 
 # Documentação
 
