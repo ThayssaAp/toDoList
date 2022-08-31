@@ -7,7 +7,6 @@ export class CriandoTarefasController {
             const { titulo, descricao } = req.body;
             const service = new CriandoTarefasService();
             const newTarefa = await service.execute({titulo, descricao});
-            console.log(typeof newTarefa);
             if(typeof newTarefa === 'string'){
                 return res.status(400).json({message: newTarefa});
             }

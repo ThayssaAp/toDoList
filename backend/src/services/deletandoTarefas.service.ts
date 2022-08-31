@@ -5,7 +5,7 @@ import { TarefasModel } from "../models/tarefas.model";
 export class DeletandoTarefasService {
     async execute(id: string){
         try {
-            const tarefa = TarefasModel.findByPk(id);
+            const tarefa = await TarefasModel.findByPk(id);
             if(!tarefa){
                 return "not found!";
             }
@@ -15,7 +15,7 @@ export class DeletandoTarefasService {
                     id: id
                 }
             });
-            return ;
+            return tarefa;
         } catch (error) {
             return error.message;
         }

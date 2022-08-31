@@ -6,7 +6,6 @@ export class PegandoTarefasController {
         try {
             const service = new PegandoTarefasService();
             const tarefas = await service.execute();
-            console.log(tarefas);
             return res.status(201).json({tarefas: tarefas});
         } catch (error) {
             return res.status(400).json({message: "erro no controller"});

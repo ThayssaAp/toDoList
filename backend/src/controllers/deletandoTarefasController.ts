@@ -9,12 +9,10 @@ export class DeletandoTarefasController {
         try {
             const { id } = req.params;
             const service = new DeletandoTarefasService();
-            const serviceGetTarefa = new PegandoTarefaByPkService();
-            const tarefaDeletada = await serviceGetTarefa.execute(id)
-            await service.execute(id);
+            const result = await service.execute(id);
             return res.json({
                 message: "Tarefa deleta com sucesso",
-                tarefaDeletada: tarefaDeletada
+                tarefaDeletada: result
             });
         } catch (error) {
             return res.json({message: error.message});
