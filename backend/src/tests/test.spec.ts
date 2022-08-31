@@ -1,60 +1,67 @@
-import {describe, expect, test} from "@jest/globals";
+import { describe, expect, test } from "@jest/globals";
 import { CriandoTarefasService } from "../services/criandoTarefas.service";
 import { DeletandoTarefasService } from "../services/deletandoTarefas.service";
 import { PegandoTarefaByPkService } from "../services/pegandoTarefaByPk.service";
 import { PegandoTarefasService } from "../services/pegandoTarefas.service";
+import { UpdateTarefasService } from "../services/updateTarefas.service";
 
-describe("Criar uma tarefa", ()=>{
-    test("Espera-se poder criar uma tarefa", async ()=>{
-        const service = new CriandoTarefasService();
+describe("Criar uma tarefa", () => {
+    test("Espera-se poder criar uma tarefa", async () => {
+        const serviceCriandoTarefa = new CriandoTarefasService();
         let tarefaTeste = {
             "titulo": "jest",
             "descricao": "testando criacao de tarefa"
         }
-        const result = await service.execute(tarefaTeste);
+        const result = await serviceCriandoTarefa.execute(tarefaTeste);
         expect(result).toHaveProperty('id');
     });
 });
 
-describe("Deletar uma tarefa", ()=>{
-    let tarefa: TarefasModelGlobal;
+let tarefa: TarefasModelGlobal;
 
-    beforeAll(async ()=>{
-        const serviceCriando = new CriandoTarefasService();
-        const tarefaCriada: TarefasModelGlobal = await serviceCriando.execute({
-            titulo: "teste jest delete", 
-            descricao: "testando o servico delete pelo jest"
-        });
-        tarefa = tarefaCriada;
-    })
-    test("Espera-se poder deletar uma tarefa", async ()=>{   
-        const serviceDeletando = new DeletandoTarefasService();  
-        const result = await serviceDeletando.execute(tarefa.id);
-        expect(result).toHaveProperty('id');
-    })
-});
-
-describe("Pegar tarefas", ()=>{
-    test("Espera-se retornar todas as tarefas", async ()=>{
-       const servicePegandoTarefa = new PegandoTarefasService();
-       const result = await servicePegandoTarefa.execute();
-       expect(result).not.toHaveProperty('message');
-    })
-});
-
-describe("Pegar tarefa por id", ()=>{
-    let tarefa: TarefasModelGlobal;
-    beforeAll(async ()=>{
-        const serviceCriando = new CriandoTarefasService();
-        const tarefaCriada: TarefasModelGlobal = await serviceCriando.execute({
-            titulo: "teste jest delete", 
-            descricao: "testando o servico delete pelo jest"
-        });
-        tarefa = tarefaCriada;
+beforeAll(async () => {
+    const serviceCriandoTarefa = new CriandoTarefasService();
+    const tarefaCriada: TarefasModelGlobal = await serviceCriandoTarefa.execute({
+        titulo: "teste jest delete",
+        descricao: "testando o servico delete pelo jest"
     });
-    test("Espera-se uma tarefa", async ()=>{
+    tarefa = tarefaCriada;
+});
+
+describe("Pegar tarefas", () => {
+    test("Espera-se retornar todas as tarefas", async () => {
+        const servicePegandoTarefa = new PegandoTarefasService();
+        const result = await servicePegandoTarefa.execute();
+        expect(result).not.toHaveProperty('message');
+    })
+});
+
+describe("Pegar tarefa por id", () => {
+    test("Espera-se uma tarefa", async () => {
         const servicePegandoTarefa = new PegandoTarefaByPkService();
         const result = await servicePegandoTarefa.execute(tarefa.id);
+        expect(result).toHaveProperty('id');
+    })
+});
+
+describe("Alterando tarefa", () => {
+    test("Espera-se receber a tarefa alterada", async () => {
+        console.log(tarefa.id);
+        let updateTarefa = {
+            id: tarefa.id,
+            titulo: 'novo nome via jest',
+            descricao: 'nova descricao via jest'
+        }
+        const serviceAlterandoTarefa = new UpdateTarefasService();
+        const result = await serviceAlterandoTarefa.execute(updateTarefa)
+        expect(result).toHaveProperty('titulo', updateTarefa.titulo);
+    })
+});
+
+describe("Deletar uma tarefa", () => {
+    test("Espera-se poder deletar uma tarefa", async () => {
+        const serviceDeletandoTarefa = new DeletandoTarefasService();
+        const result = await serviceDeletandoTarefa.execute(tarefa.id);
         expect(result).toHaveProperty('id');
     })
 });

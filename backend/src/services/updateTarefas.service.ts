@@ -9,7 +9,7 @@ interface IRequestUpdateTarefa {
 export class UpdateTarefasService {
     async execute({ id, titulo, descricao }: IRequestUpdateTarefa) {
         try {
-            const tarefa = await TarefasModel.findByPk(id);
+            let tarefa: any = await TarefasModel.findByPk(id);
             if (!tarefa) {
                 return "not found";
             }
