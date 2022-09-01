@@ -1,7 +1,5 @@
 let edit = false;
-
 let openModal = document.getElementsByClassName('nome-tarefa');
-console.log(openModal)
 
 for(let i = 0; i < openModal.length; i++) {
     openModal[i].addEventListener("click", () => {

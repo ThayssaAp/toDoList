@@ -9,8 +9,34 @@ const tarefas = [{
     titulo: "tarefas"
 }]
 
-function getTarefas() {
+async function criarTarefa() {
+    const inputTitulo = document.querySelector("#titulo-tarefa");
+    const titulo = inputTitulo.value;
 
+    const inputDescricao = document.querySelector("#descricao-tarefa");
+    const descricao = inputDescricao.value; 
+
+    const url = "http://localhost:3001/tarefas"
+
+    const novaPergunta = {
+        titulo: titulo, 
+        descricao: descricao
+    }
+
+    try{
+    await fetch(url, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/JSON"
+        },
+        body: JSON.stringify(novaPergunta)
+    })
+    .then(res => res.json())
+    .then(res => console.log(novaPergunta));
+    }
+    catch(error) {
+        console.log(error)
+    }
 }
 
 function adcClick(){
@@ -42,19 +68,18 @@ function adcTarefa() {
     
         var btnEditar = document.createElement("button");
         btnEditar.classList.add("btn-editar");
-        btnEditar.innerHTML = '<img src="./src/img/lapis.png">'
+        btnEditar.innerHTML = '<img src="/img/lapis.png">'
         div2.appendChild(btnEditar)
     
         var btnExcluir = document.createElement("button");
         btnExcluir.classList.add("btn-apagar");
-        btnExcluir.innerHTML = '<img src="./src/img/lixeira.png">'
+        btnExcluir.innerHTML = '<img src="/img/lixeira.png">'
         div2.appendChild(btnExcluir)
     
         li.appendChild(div1)
         li.appendChild(div2)
     
         var ul = document.getElementsByClassName("lista")
-        console.log(ul);
         ul[0].appendChild(li)   
     }
 }

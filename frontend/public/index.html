@@ -23,15 +23,15 @@
             <form method="post">
                 <h2 class="titulo-form">Adicionar Tarefa</h2>
                 <div class="item">
-                    <label>Título:</label><br>
+                    <label for="titulo-tarefa">Título:</label><br>
                     <input id="titulo-tarefa" name="titulo-tarefa" id="titulo-tarefa" type="text" placeholder="Título">
                 </div>
 
                 <div class="item">
-                    <label>Descrição:</label><br>
+                    <label for="descricao-tarefa">Descrição:</label><br>
                     <input id="descricao-tarefa" name="descricao-tarefa" id="descricao-tarefa" type="text" placeholder="Descrição">
                 </div>
-                <button class="btn-enviar" type=“submit” title=“enviar”>Enviar</button>
+                <button onclick="criarTarefa()" type="button" class="btn-enviar">Enviar</button>
             </form>
         </div>
         <div class="tarefa">
@@ -55,7 +55,7 @@
     </div>
 
     <script src="/js/modal.js"></script>
-    <script src="/js/index.js"></script>
+    <script src="/js/tarefa.js"></script>
 </body>
 
 </html>
