@@ -68,12 +68,12 @@ function adcTarefa() {
     
         var btnEditar = document.createElement("button");
         btnEditar.classList.add("btn-editar");
-        btnEditar.innerHTML = '<img src="/img/lapis.png">'
+        btnEditar.innerHTML = '<img src="./img/lapis.png">'
         div2.appendChild(btnEditar)
     
         var btnExcluir = document.createElement("button");
         btnExcluir.classList.add("btn-apagar");
-        btnExcluir.innerHTML = '<img src="/img/lixeira.png">'
+        btnExcluir.innerHTML = '<img src="./img/lixeira.png">'
         div2.appendChild(btnExcluir)
     
         li.appendChild(div1)
