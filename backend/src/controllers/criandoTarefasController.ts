@@ -10,7 +10,9 @@ export class CriandoTarefasController {
             if(typeof newTarefa === 'string'){
                 return res.status(400).json({messageError: newTarefa});
             }
-            return res.status(201).json({tarefa: newTarefa});
+            return res.status(201).json({
+                message: 'Tarefa criada com sucesso!',
+                tarefa: newTarefa});
         } catch (error) {
             return res.status(400).json({messageError: error.message});
         }

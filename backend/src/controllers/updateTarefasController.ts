@@ -11,7 +11,9 @@ export class UpdateTarefasController {
             if(typeof newTarefa === 'string'){
                 return res.status(404).json({messageError: newTarefa})
             }
-            return res.json({tarefa_atualizada:newTarefa });
+            return res.json({
+                message: 'Tarefa atualizada com sucesso!',
+                tarefa_atualizada:newTarefa });
         } catch (error) {
             return res.json({messageError: error.message})
         }
