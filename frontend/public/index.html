@@ -31,7 +31,7 @@
                     <label for="descricao-tarefa">Descrição:</label><br>
                     <input id="descricao-tarefa" name="descricao-tarefa" id="descricao-tarefa" type="text" placeholder="Descrição">
                 </div>
-                <button onclick="criarTarefa()" type="button" class="btn-enviar">Enviar</button>
+                <button  type="button" class="btn-enviar">Enviar</button>
             </form>
         </div>
         <div class="tarefa">
@@ -42,20 +42,37 @@
         </div>
     </div>
 
-    <div class="modal">
+    <div class="modal-edit">
         <button onclick="fecharModal()" class="fechar-modal">X</button>
-        <div>
-            <h1>Titulo da Tarefa aqui</h1>
-            <p>Descrição da tarefa aqui</p>
-        </div>
+        <form>
+            <h2>Editar tarefa:</h2><br>
+            <label for="titulo-edit">Título:</label><br>
+            <input name="titulo-edit" id="titulo-edit" type="text"><br>
+
+            <label for="descricao-edit">Descrição:</label><br>
+            <input name="descricao-edit" id="descricao-edit" type="text">
+        </form>
         <button class="btn-feito">
+<<<<<<< HEAD
             Feito
+=======
+            Alterar
+>>>>>>> fetch_front
             <img src="./img/check.png" width="15vh">
         </button>
     </div>
 
+<<<<<<< HEAD
     <script src="./js/modal.js"></script>
     <script src="./js/tarefa.js"></script>
+=======
+    <script src="/js/modal.js"></script>
+    <script src="/js/fetch/pegarTarefas.js"></script>
+    <script src="/js/fetch/alterarTarefa.js"></script>
+    <script src="/js/fetch/criarTarefa.js"></script>
+    <script src="/js/fetch/deletandoTarefa.js"></script>
+    
+>>>>>>> fetch_front
 </body>
 
 </html>

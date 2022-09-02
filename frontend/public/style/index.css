@@ -44,7 +44,7 @@ header h1 {
     background-color: #F5F5F5;
     border: none;
     margin-top: 1%;
-    width: 40vh;
+    width: 20vw;
     height: 15vh;
     border-radius: 25px;
     padding: 5%;
@@ -96,21 +96,23 @@ header h1 {
 
 .tarefa h2 {
     font-weight: 400;
+    width: 40vw;
 }
 
 .tarefa p {
     padding: 3% 1%;
     font-size: small;
+    width: 40vw;
 }
 
 .cx-tarefa {
-    width: 110vh;
+    width: 55vw;
     height: 13vh;
     background-color: #F5F5F5;
     border-radius: 30px;
     font-weight: 300;
-    padding: 2%;
-    margin: 2vh 0;
+    padding: 3%;
+    margin: 3vh 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -130,16 +132,16 @@ header h1 {
 }
 
 .btn-editar {
-    width: 5vh;
-    height: 5vh;
+    width: 30px;
+    height: 30px;
     background-color: #fff;
     border-radius: 5px;
     border: none;
 }
 
 .btn-apagar {
-    width: 5vh;
-    height: 5vh;
+    width: 30px;
+    height: 30px;
     background-color: #fff;
     border-radius: 5px;
     border: none;
@@ -153,17 +155,19 @@ header h1 {
     height: 3vh;
 }
 
-.modal {
+.modal-edit {
     background-color: #5093D0;
+    color: #fff;
     position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 550px;
-    height: 400px;
+    width: 40vw;
+    height: 33vh;
     animation: animate;
     animation-duration: 1000ms;
     box-shadow: 6px 5px 5px 0px rgb(0 0 0 / 40%);
+    padding: 2%;
     display: none;
 }
 
@@ -177,14 +181,13 @@ header h1 {
     }
 }
 
-.modal h1 {
-    color: #fff;
-    padding: 5%;
-}
-
-.modal p {
-    color: #F5F5F5;
-    padding-left: 5%;
+.modal-edit input{
+    background-color: #F5F5F5;
+    border: none;
+    width: 80%;
+    border-radius: 25px;
+    padding: 1%;
+    margin: 1%;
 }
 
 .btn-feito {
@@ -192,20 +195,23 @@ header h1 {
     border-radius: 20px;
     background-color: #fff;
     color: #5093D0;
-    margin-left: 5%;
-    margin-top: 37%;
+    margin-left: 1%;
+    margin-top: 5%;
     border: none;
+}
+
+.btn-feito:hover {
+    box-shadow: 2px 2px 2px 0px rgb(0 0 0 / 40%);
+    background-color: #fbfeff;
 }
 
 .fechar-modal {
     background-color: #ffffff;
     color: #5093D0;
-    padding: 1%;
     border-radius: 50%;
     border: none;
-    width: 5vh;
-    height: 5vh;
-    margin: 2%;
+    width: 30px;
+    height: 30px;
     align-items: center;
     float: right;
     font-weight: bolder;
