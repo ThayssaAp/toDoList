@@ -32,3 +32,7 @@ function fecharModal() {
         document.body.style.background = "#FFF";
     };
 };
+
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("Página carregada!")
+});
