@@ -42,15 +42,19 @@
         </div>
     </div>
 
-    <div class="modal">
+    <div class="modal-edit">
         <button onclick="fecharModal()" class="fechar-modal">X</button>
-        <div>
-            <h1>Titulo da Tarefa aqui</h1>
-            <p>Descrição da tarefa aqui</p>
-        </div>
+        <form>
+            <h2>Editar tarefa:</h2><br>
+            <label for="titulo-edit">Título:</label><br>
+            <input name="titulo-edit" id="titulo-edit" type="text"><br>
+
+            <label for="descricao-edit">Descrição:</label><br>
+            <input name="descricao-edit" id="descricao-edit" type="text">
+        </form>
         <button class="btn-feito">
-            Feito
-            <img src="/img/check.png" width="15vh">
+            Alterar
+            <img src="./img/check.png" width="15vh">
         </button>
     </div>
 
