@@ -190,7 +190,33 @@ header h1 {
     margin: 1%;
 }
 
-.btn-feito {
+.modal-delete {
+    background-color: #5093D0;
+    color: #fff;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 40vw;
+    height: 33vh;
+    animation: animate;
+    animation-duration: 1000ms;
+    box-shadow: 6px 5px 5px 0px rgb(0 0 0 / 40%);
+    padding: 2%;
+    display: none;
+}
+
+@keyframes animate {
+    from {
+        opacity: 1;
+    }
+
+    from {
+        opacity: 0;
+    }
+}
+
+.btn-feito, .btn-confirma {
     padding: 1% 2%;
     border-radius: 20px;
     background-color: #fff;
@@ -200,7 +226,17 @@ header h1 {
     border: none;
 }
 
-.btn-feito:hover {
+.btn-cancelar {
+    padding: 1% 2%;
+    border-radius: 20px;
+    background-color: rgb(253, 253, 253);
+    color: #000;
+    margin-left: 1%;
+    margin-top: 5%;
+    border: none;
+}
+
+.btn-feito:hover, .btn-confirma:hover, .btn-cancelar:hover {
     box-shadow: 2px 2px 2px 0px rgb(0 0 0 / 40%);
     background-color: #fbfeff;
 }

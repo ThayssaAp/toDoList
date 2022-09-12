@@ -10,32 +10,27 @@ async function criarTarefa() {
     const titulo = inputTitulo.value;
 
     const inputDescricao = document.querySelector("#descricao-tarefa");
-    const descricao = inputDescricao.value; 
+    const descricao = inputDescricao.value;
 
     const url = "http://localhost:3001/tarefas"
 
-    const novaPergunta = {
-        titulo: titulo.trim(), 
+    const novaTarefa = {
+        titulo: titulo.trim(),
         descricao: descricao.trim()
     }
 
-    try{
     await fetch(url, {
         method: "POST",
         headers: {
             "Content-Type": "application/JSON",
         },
-        body: JSON.stringify(novaPergunta)
+        body: JSON.stringify(novaTarefa)
     })
-    .then(res => res.json())
-    .then(res => {
-        console.log(novaPergunta)
-        console.log(res)
-    });
-    }
-    catch(error) {
-        console.log(error)
-    }
+        .then(res => res.json())
+        .then(res => {
+            console.log(novaTarefa)
+            console.log(res)
+        });
 }
 
 document.addEventListener("DOMContentLoaded", () => {

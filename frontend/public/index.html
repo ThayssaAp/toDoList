@@ -52,8 +52,20 @@
             <label for="descricao-edit">Descrição:</label><br>
             <input name="descricao-edit" id="descricao-edit" type="text">
         </form>
-        <button class="btn-feito">
+        <button onclick="alterarTarefa()" class="btn-feito">
             Alterar
+            <img src="./img/check.png" width="15vh">
+        </button>
+    </div>
+
+    <div class="modal-delete">
+        <button onclick="fecharModal()" class="fechar-modal">X</button>
+        <h2>Tem certeza que deseja apagar essa tarefa?</h2>
+        <button onclick="fecharModal()" class="btn-cancelar">
+            Não, cancelar
+        </button>
+        <button onclick="deletarTarefa()" class="btn-confirma">
+            Confirmar
             <img src="./img/check.png" width="15vh">
         </button>
     </div>
