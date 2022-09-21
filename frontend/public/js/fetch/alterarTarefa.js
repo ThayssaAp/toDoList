@@ -1,4 +1,9 @@
 async function alterarTarefa(){
+    // const li = document.getElementsByClassName("cx-tarefa")
+    // console.log(li)
+    // const name = li[i].getAttribute("name")
+    // console.log(name)
+
     const inputTitulo = document.querySelector("#titulo-edit");
     const titulo = inputTitulo.value;
 
@@ -10,7 +15,7 @@ async function alterarTarefa(){
         descricao: descricao
     }
 
-    const id = ""
+    const id = name
     const url = `http://localhost:3001/tarefas/${id}`
     
     await fetch(url, {
@@ -21,7 +26,11 @@ async function alterarTarefa(){
         body: JSON.stringify(tarefaEdit)
     })
     .then(res => res.json())
-    .then(res => console.log(res.message))
+    .then(res => {
+        console.log(res.message)
+        window.alert("Tarefa alterada com sucesso!");
+        location.reload()
+    })
 }
 
 document.addEventListener("DOMContentLoaded", () => {

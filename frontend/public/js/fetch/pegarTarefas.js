@@ -1,3 +1,8 @@
+function hide(e){
+    console.log(e.target.value)
+   // e.target.value;
+}
+
 async function getTarefas() {
     const url = "http://localhost:3001/tarefas"
     await fetch(url)
@@ -50,7 +55,11 @@ async function getTarefas() {
                 var ul = document.getElementsByClassName("lista")
                 ul[0].appendChild(li)
                 li.setAttribute("name", tarefas[i].id)
-                console.log(tarefas[i].id)
+               // console.log(li.getAttribute("name"))
+                btnEditar.addEventListener("click", () => {
+                    console.log(li.getAttribute("name"))
+                   // li.addEventListener("click", hide, false)
+                })
             }
         })
 }

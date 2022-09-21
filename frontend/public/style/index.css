@@ -121,7 +121,6 @@ header h1 {
 
 .cx-tarefa:hover {
     background-color: rgb(235, 235, 235);
-    cursor: pointer;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -137,6 +136,7 @@ header h1 {
     background-color: #fff;
     border-radius: 5px;
     border: none;
+    cursor: pointer;
 }
 
 .btn-apagar {
@@ -145,6 +145,11 @@ header h1 {
     background-color: #fff;
     border-radius: 5px;
     border: none;
+    cursor: pointer;
+}
+
+.btn-apagar:hover, .btn-editar:hover {
+    background-color: #eff9ff;
 }
 
 .btn-apagar img {
