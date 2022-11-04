@@ -48,6 +48,10 @@
                                 "schema": {
                                     "type": "object",
                                     "properties": {
+                                                   "message": {
+                                                          "type":"string",
+                                                          "example": "Tarefa criada com sucesso!"
+                                                   },
                                                    "tarefa": {
                                                        "type": "object",
                                                        "properties": {
@@ -132,17 +136,84 @@
                         }    
                     }
                 }
-            },
+            }
             
         
-        "options": {
-            "tags": ["Tarefa"],
-            "summary": "Get Options",
-            "description": "Options request in application"
-        }
+        
             
     },
+    
     "/tarefas/{id}":{
+        "get": {
+            "tags": ["Tarefa"],
+            "summary": "Get task by id",
+            "description": "Getting application one task",
+            "parameters":[  
+               {  
+                  "name":"id",
+                  "in":"path",
+                  "description":"Task identification number",
+                  "required":true,
+                  "type":"string"
+               }
+            ],
+            "responses":{
+                "200": {
+                    "description": "Success",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                               "tarefa": {
+                                                   "type": "object",
+                                                   "properties": {
+                                                       "id": {
+                                                           "type": "string",
+                                                           "example": "721e6fa8-1800-4d12-a089-c80e00909d94"
+                                                       },
+                                                       "titulo": {
+                                                           "type": "string",
+                                                           "example": "Lavar a louça"
+                                                       },
+                                                       "descricao": {
+                                                           "type": "string",
+                                                           "example": "lavar a louca de casa"
+                                                       },
+                                                       "updatedAt": {
+                                                           "type": "string",
+                                                           "example": "2022-08-29T19:30:26.645Z"
+                                                       },
+                                                       "createdAt": {
+                                                           "type": "string",
+                                                           "example": "2022-08-27T17:27:54.312Z"
+                                                       }
+                                                   }
+                                               }          
+                                           }
+                                       }  
+                        }
+                        
+                    }    
+                },
+                "404":{
+                    "description": "Error Request Params",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                                   "messageError": {
+                                                       "type": "string",
+                                                       "example": "not found!"
+                                                    }          
+                                               }
+                                           }  
+                            }
+                        }
+                }
+        }
+        },
         "put": {
             "tags": ["Tarefa"],
             "summary": "Update a task",
