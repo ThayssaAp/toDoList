@@ -44,7 +44,7 @@ Jest <img height="14em" src="https://img.shields.io/badge/-jest-%23C21325?style=
 
 # Documentação
 
-<img width="916" alt="Captura de Tela 2022-08-31 às 15 00 31" src="https://user-images.githubusercontent.com/60610706/187747654-1f7675a6-5153-4ab7-9ac5-e0f1ed1da114.png">
+<img width="1125" alt="Captura de Tela 2022-11-04 às 17 42 05" src="https://user-images.githubusercontent.com/60610706/200071328-1ad068ea-620b-41f4-abed-4a1b912d15fb.png">
 
 ### URL ACCESS
 - http://localhost:3001/todo-docs/
