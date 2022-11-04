@@ -3,8 +3,8 @@ import { v4 as uuid } from "uuid";
 import { db } from "../connection/connect";
 
 interface IRequestCriandoTarefas {
-  titulo: string;
-  descricao: string;
+  titulo: string | null;
+  descricao: string | null;
 }
 
 export class CriandoTarefasService {

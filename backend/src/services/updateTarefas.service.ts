@@ -1,4 +1,3 @@
-import { db } from "../connection/connect";
 import { TarefasModel } from "../models/tarefas.model";
 
 interface IRequestUpdateTarefa {
@@ -14,9 +13,10 @@ export class UpdateTarefasService {
                 return "not found";
             }
 
-            if((titulo && descricao) === undefined ){
+            if(titulo === undefined && descricao === undefined){
                 throw Error("invalid properties")
             }
+
             await TarefasModel.update({
                 titulo: titulo || tarefa.titulo,
                 descricao: descricao || tarefa.descricao
