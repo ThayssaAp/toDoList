@@ -3,19 +3,19 @@ import { v4 as uuid } from "uuid";
 import { db } from "../connection/connect";
 
 interface IRequestCriandoTarefas {
-  titulo: string | null;
-  descricao: string | null;
+  title: string | null;
+  description: string | null;
 }
 
 export class CriandoTarefasService {
-  async execute({ titulo, descricao }: IRequestCriandoTarefas) {
+  async execute({ title, description }: IRequestCriandoTarefas) {
     try {
       TarefasModel;
       await db.sync();
-      if ((titulo && descricao) === undefined || (titulo && descricao) === null || (titulo && descricao) === '') {
+      if ((title && description) === undefined || (title && description) === null || (title && description) === '') {
         return 'Invalid title or description!';
       }
-      const tarefa: any = await TarefasModel.create({ id: uuid(), titulo, descricao });
+      const tarefa: any = await TarefasModel.create({ id: uuid(), title, description });
       return tarefa;
     } catch (error) {
       return error.message;

@@ -1,7 +1,8 @@
 interface TarefasModelGlobal{
     id: string;
-    titulo: string;
-    descricao: string;
+    title: string;
+    description: string;
+    complete: boolean;
     createdAt: string;
     updatedAt: string;
 }

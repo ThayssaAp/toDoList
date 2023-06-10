@@ -1,14 +1,25 @@
 version: '3.8'
 services:
-  postgres:
-    image: postgres:latest
-    restart: always
+  posgresTODO:
+    image: postgres
+    restart: always 
     environment:
       - POSTGRES_USER=admin
       - POSTGRES_PASSWORD=admin
     volumes:
-      - postgres:/var/lib/postgresql/data
+      - /var/lib/postgresql/data
     ports:
-      - '5432:5433'
-volumes:
-  postgres:
+      - "5432:5432"
+    
+  mysqlTODO:
+    image: mysql:latest
+    restart: always
+    environment:
+      - MYSQL_ROOT_USER=root
+      - MYSQL_ROOT_PASSWORD=
+      - MYSQL_ROOT_DATABASE=todolist_staging
+    ports:
+      - "3306:3306"
+    
+
+

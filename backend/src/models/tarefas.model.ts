@@ -6,12 +6,17 @@ export const TarefasModel = db.define("tarefas", {
         type: DataTypes.STRING,
         primaryKey: true
     },
-    titulo: {
+    title: {
         type: DataTypes.STRING,
         allowNull: false
     },
-    descricao: {
+    description: {
         type: DataTypes.STRING,
         allowNull: false
+    },
+    complete: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false
     }
+
 });

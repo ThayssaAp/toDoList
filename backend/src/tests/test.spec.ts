@@ -9,8 +9,8 @@ describe("Criar uma tarefa", () => {
     test("Espera-se poder criar uma tarefa", async () => {
         const serviceCriandoTarefa = new CriandoTarefasService();
         let tarefaTeste = {
-            "titulo": "jest",
-            "descricao": "testando criacao de tarefa"
+            "title": "jest",
+            "description": "testando criacao de tarefa"
         }
         const result = await serviceCriandoTarefa.execute(tarefaTeste);
         expect(result).toHaveProperty('id');
@@ -23,8 +23,8 @@ let tarefa: TarefasModelGlobal;
 beforeAll(async () => {
     const serviceCriandoTarefa = new CriandoTarefasService();
     const tarefaCriada: TarefasModelGlobal = await serviceCriandoTarefa.execute({
-        titulo: "teste jest delete",
-        descricao: "testando o servico delete pelo jest"
+        title: "teste jest delete",
+        description: "testando o servico delete pelo jest"
     });
     tarefa = tarefaCriada;
 });
@@ -50,12 +50,12 @@ describe("Alterando tarefa", () => {
     test("Espera-se receber a tarefa alterada", async () => {
         let updateTarefa = {
             id: tarefa.id,
-            titulo: 'novo nome via jest',
-            descricao: 'nova descricao via jest'
+            title: 'novo nome via jest',
+            description: 'nova description via jest'
         }
         const serviceAlterandoTarefa = new UpdateTarefasService();
         const result = await serviceAlterandoTarefa.execute(updateTarefa)
-        expect(result).toHaveProperty('titulo', updateTarefa.titulo);
+        expect(result).toHaveProperty('title', updateTarefa.title);
         expect(result).not.toHaveProperty('messageError');
     })
 });

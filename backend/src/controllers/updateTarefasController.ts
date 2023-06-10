@@ -5,9 +5,9 @@ export class UpdateTarefasController {
     async handle(req: Request, res: Response){
         try {
             const { id } = req.params;
-            const { titulo, descricao } = req.body;
+            const { title, description } = req.body;
             const service = new UpdateTarefasService();
-            const newTarefa = await service.execute({id, titulo, descricao});
+            const newTarefa = await service.execute({id, title, description});
             if(typeof newTarefa === 'string'){
                 return res.status(404).json({messageError: newTarefa})
             }

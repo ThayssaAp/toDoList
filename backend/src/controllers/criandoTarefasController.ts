@@ -4,9 +4,9 @@ import { CriandoTarefasService } from "../services/criandoTarefas.service";
 export class CriandoTarefasController {
     async handle(req: Request, res: Response){
         try {
-            const { titulo, descricao } = req.body;
+            const { title, description, complete } = req.body;
             const service = new CriandoTarefasService();
-            const newTarefa = await service.execute({titulo, descricao});
+            const newTarefa = await service.execute({title, description});
             if(typeof newTarefa === 'string'){
                 return res.status(400).json({messageError: newTarefa});
             }

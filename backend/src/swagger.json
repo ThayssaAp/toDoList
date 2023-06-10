@@ -21,10 +21,10 @@
                             "schema": {
                                 "type": "object",
                                 "properties": {
-                                    "titulo": {
+                                    "title": {
                                         "type": "string"
                                     },
-                                    "descricao": {
+                                    "description": {
                                         "type": "string"
                                     }
                                 }
@@ -32,8 +32,8 @@
                             "examples": {
                                 "tarefa": {
                                     "value": {
-                                        "titulo": "Fazer lição de casa",
-                                        "descricao": "Finalizar liçao de casa de matematica"
+                                        "title": "Fazer lição de casa",
+                                        "description": "Finalizar liçao de casa de matematica"
                                     }
                                 }
                             }
@@ -59,11 +59,11 @@
                                                                "type": "string",
                                                                "example": "721e6fa8-1800-4d12-a089-c80e00909d94"
                                                            },
-                                                           "titulo": {
+                                                           "title": {
                                                                "type": "string",
                                                                "example": "Fazer lição de casa"
                                                            },
-                                                           "descricao": {
+                                                           "description": {
                                                                "type": "string",
                                                                "example": "Finalizar liçao de casa de matematica"
                                                            },
@@ -92,8 +92,8 @@
                                     "properties": {
                                                    "messageError": {
                                                        "type": "string",
-                                                       "example": ["notNull Violation: tarefas.descricao cannot be null", 
-                                                                   "notNull Violation: tarefas.titulo cannot be null",
+                                                       "example": ["notNull Violation: tarefas.description cannot be null", 
+                                                                   "notNull Violation: tarefas.title cannot be null",
                                                                    "Invalid title or description!"
                                                         ]
                                                    }          
@@ -123,8 +123,8 @@
                                                     "type": "object",
                                                     "example": {
                                                         "id":  "721e6fa8-1800-4d12-a089-c80e00909d94",
-                                                        "titulo": "Fazer lição de casa",
-                                                        "descricao": "Finalizar liçao de casa de matematica",
+                                                        "title": "Fazer lição de casa",
+                                                        "description": "Finalizar liçao de casa de matematica",
                                                         "updatedAt": "2022-08-27T17:27:54.312Z",
                                                         "createdAt": "2022-08-27T17:27:54.312Z" 
                                                     }                                                   
@@ -172,11 +172,11 @@
                                                            "type": "string",
                                                            "example": "721e6fa8-1800-4d12-a089-c80e00909d94"
                                                        },
-                                                       "titulo": {
+                                                       "title": {
                                                            "type": "string",
                                                            "example": "Lavar a louça"
                                                        },
-                                                       "descricao": {
+                                                       "description": {
                                                            "type": "string",
                                                            "example": "lavar a louca de casa"
                                                        },
@@ -233,10 +233,10 @@
                         "schema": {
                             "type": "object",
                             "properties": {
-                                "titulo": {
+                                "title": {
                                     "type": "string"
                                 },
-                                "descricao": {
+                                "description": {
                                     "type": "string"
                                 }
                             }
@@ -244,8 +244,8 @@
                         "examples": {
                             "tarefa": {
                                 "value": {
-                                    "titulo": "Lavar a louça",
-                                    "descricao": "lavar a louca de casa"
+                                    "title": "Lavar a louça",
+                                    "description": "lavar a louca de casa"
                                 }
                             }
                         }
@@ -267,11 +267,11 @@
                                                            "type": "string",
                                                            "example": "721e6fa8-1800-4d12-a089-c80e00909d94"
                                                        },
-                                                       "titulo": {
+                                                       "title": {
                                                            "type": "string",
                                                            "example": "Lavar a louça"
                                                        },
-                                                       "descricao": {
+                                                       "description": {
                                                            "type": "string",
                                                            "example": "lavar a louca de casa"
                                                        },
@@ -346,11 +346,11 @@
                                                     "type": "string",
                                                     "example": "721e6fa8-1800-4d12-a089-c80e00909d94"
                                                 },
-                                                "titulo": {
+                                                "title": {
                                                     "type": "string",
                                                     "example": "Lavar a louça"
                                                 },
-                                                "descricao": {
+                                                "description": {
                                                     "type": "string",
                                                     "example": "lavar a louca de casa"
                                                 },
