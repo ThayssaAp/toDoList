@@ -16,6 +16,7 @@ export const TarefasModel = db.define("tarefas", {
     },
     complete: {
         type: DataTypes.BOOLEAN,
+        allowNull: false,
         defaultValue: false
     }
 

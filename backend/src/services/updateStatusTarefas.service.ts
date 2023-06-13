@@ -2,26 +2,24 @@ import { TarefasModel } from "../models/tarefas.model";
 
 interface IRequestUpdateTarefa {
     id: string;
-    title?: string;
-    description?: string;
-    complete?: boolean;
+    complete: boolean;
 }
-export class UpdateTarefasService {
-    async execute({ id, title, description, complete }: IRequestUpdateTarefa) {
+export class UpdateStatusTarefasService {
+    async execute({ id, complete }: IRequestUpdateTarefa) {
         try {
             let tarefa: any = await TarefasModel.findByPk(id);
             if (!tarefa) {
                 return "not found";
             }
 
-            if(title === undefined && description === undefined && complete === undefined){
+            if(complete === undefined){
                 throw Error("invalid properties")
             }
              
             await TarefasModel.update({
-                title: title || tarefa.title,
-                description: description || tarefa.description,
-                complete: complete || tarefa.complete
+                title: tarefa.title,
+                description: tarefa.description,
+                complete: complete 
             }, {
                 where: {
                     id: id

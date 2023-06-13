@@ -4,6 +4,7 @@ import { DeletandoTarefasService } from "../services/deletandoTarefas.service";
 import { PegandoTarefaByPkService } from "../services/pegandoTarefaByPk.service";
 import { PegandoTarefasService } from "../services/pegandoTarefas.service";
 import { UpdateTarefasService } from "../services/updateTarefas.service";
+import { UpdateStatusTarefasService } from "../services/updateStatusTarefas.service";
 
 describe("Criar uma tarefa", () => {
     test("Espera-se poder criar uma tarefa", async () => {
@@ -59,6 +60,18 @@ describe("Alterando tarefa", () => {
         expect(result).not.toHaveProperty('messageError');
     })
 });
+
+describe("Alterando status da tarefa", ()=> {
+    test("Espera-se alterar status de finalizada da tarefa", async ()=> {
+        let updateTarefa = {
+            id: tarefa.id,
+            complete: tarefa.complete === true ? false : true
+        }
+        const serviceAlterandoStatusTarefa = new UpdateStatusTarefasService();
+        const result = await serviceAlterandoStatusTarefa.execute(updateTarefa);
+        expect(result).not.toHaveProperty('messageError');
+    })
+})
 
 describe("Deletar uma tarefa", () => {
     test("Espera-se poder deletar uma tarefa", async () => {

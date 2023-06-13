@@ -1,13 +1,13 @@
 import { Request, Response } from "express";
-import { UpdateTarefasService } from "../services/updateTarefas.service";
+import { UpdateStatusTarefasService } from "../services/updateStatusTarefas.service";
 
-export class UpdateTarefasController {
+export class UpdateStatusTarefasController {
     async handle(req: Request, res: Response){
         try {
             const { id } = req.params;
-            const { title, description, complete } = req.body;
-            const service = new UpdateTarefasService();
-            const newTarefa = await service.execute({id, title, description, complete});
+            const { complete } = req.body;
+            const service = new UpdateStatusTarefasService();
+            const newTarefa = await service.execute({id, complete});
             if(typeof newTarefa === 'string'){
                 return res.status(404).json({messageError: newTarefa})
             }
